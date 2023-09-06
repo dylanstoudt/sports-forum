@@ -13,20 +13,20 @@ Team.init(
     },
     teamName:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
 
     },
     player1: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     player2: {
       type: DataTypes.STRING,
-      allownull: false
+      allownull: true
     },
     Player3: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

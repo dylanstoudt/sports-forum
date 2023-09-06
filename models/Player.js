@@ -24,7 +24,7 @@ Player.init(
     assists: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
+      
     },
     rebounds: {
       type: DataTypes.INTEGER,
