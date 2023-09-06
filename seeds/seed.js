@@ -11,13 +11,14 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const team = await Team.bulkCreate(teamData, {
+    individualHooks: true,
+    returning: true,
+  })
+  const player = await Player.bulkCreate(playerData, {
+    individualHooks: true,
+    returning: true,
+  })
 
   process.exit(0);
 };

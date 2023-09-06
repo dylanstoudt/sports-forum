@@ -24,7 +24,7 @@
     "steals": 2,
     "blocks": 2,
     "ranking": 3,
-    "team_id": 3
+    "team_id": 1
   },
   {
     "ppg": 25,
@@ -33,7 +33,7 @@
     "steals": 0,
     "blocks": 2,
     "ranking": 4,
-    "team_id": 4
+    "team_id": 2
   },
   {
     "ppg": 25,
@@ -42,7 +42,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 5,
-    "team_id": 5
+    "team_id": 1
   },
   {
     "ppg": 24,
@@ -51,7 +51,7 @@
     "steals": 2,
     "blocks": 0,
     "ranking": 6,
-    "team_id": 4
+    "team_id": 2
   },
   {
     "ppg": 26,
@@ -60,7 +60,7 @@
     "steals": 2,
     "blocks": 1,
     "ranking": 7,
-    "team_id": 3
+    "team_id": 1
   },
   {
     "ppg": 23,
@@ -69,7 +69,7 @@
     "steals": 2,
     "blocks": 0,
     "ranking": 8,
-    "team_id": 5
+    "team_id": 2
   },
   {
     "ppg": 29,
@@ -78,7 +78,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 9,
-    "team_id": 4
+    "team_id": 1
   },
   {
     "ppg": 31,
@@ -87,7 +87,7 @@
     "steals": 3,
     "blocks": 2,
     "ranking": 10,
-    "team_id": 5
+    "team_id": 2
   }
  
 ]
