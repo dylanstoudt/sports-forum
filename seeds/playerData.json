@@ -7,7 +7,8 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 1,
-    "team_id": 1 
+    "team_id": 1, 
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png"
   },
   {
     "name": "Giannis Antetokounmpo",
@@ -17,8 +18,8 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 2,
-    "team_id": 2
-
+    "team_id": 2,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png"
   },
   {
     "name": "Luka Doncic",
@@ -28,8 +29,8 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 3,
-    "team_id": 1
-
+    "team_id": 1,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png"
   },
   {
     "name": "Jayson Tatum",
@@ -39,8 +40,8 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 4,
-    "team_id": 2
-
+    "team_id": 2,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png"
   },
   {
     "name": "Joel Embiid",
@@ -50,8 +51,8 @@
     "steals": 1,
     "blocks": 2,
     "ranking": 5,
-    "team_id": 1
-
+    "team_id": 1,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png"
   },
   {
     "name": "Kevin Durant",
@@ -61,7 +62,8 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 6,
-    "team_id": 2
+    "team_id": 2,
+    "img": "https://a.espncdn.com/i/headshots/nba/players/full/3202.png"
 
   },
   {
@@ -72,8 +74,8 @@
     "steals": 1,
     "blocks": 0,
     "ranking": 7,
-    "team_id": 1
-
+    "team_id": 1,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"
   },
   {
     "name": "Lebron James",
@@ -83,8 +85,8 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 8,
-    "team_id": 2
-
+    "team_id": 2,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
   },
   {
     "name": "Ja Morant",
@@ -94,8 +96,8 @@
     "steals": 1,
     "blocks": 0,
     "ranking": 9,
-    "team_id": 1
-
+    "team_id": 1,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png"
   },
   {
     "name": "Damian Lillard",
@@ -105,9 +107,8 @@
     "steals": 1,
     "blocks": 0,
     "ranking": 10,
-    "team_id": 2
-    
-
+    "team_id": 2,
+    "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203081.png"  
   }
  
 ]
