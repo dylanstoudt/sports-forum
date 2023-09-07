@@ -1,49 +1,53 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Team, Player, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      projects, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const teamData = await Team.findAll({
       include: [
         {
-          model: User,
-          attributes: ['name'],
-        },
+          model: Player,
+          // add attributes
+          attributes: ['img', 'name', 'ppg', 'assists', 'rebounds', 'steals', 'blocks', 'ranking']
+        }
       ],
+      where: {
+        user_id: req.session.user_id,
+      },
     });
+    const playerData = await Player.findAll()
 
-    const project = projectData.get({ plain: true });
+    const teams = teamData.map((team) => team.get({ plain: true }));
+    const players = playerData.map((team) => team.get({ plain: true }))
 
-    res.render('project', {
-      ...project,
-      logged_in: req.session.logged_in
-    });
+    res.render('dashboard', { teams, players })
+    // res.render('dashboard', { teams, players })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/teams', withAuth, async (req, res) => {
+  try {
+    const teamData = await Team.findall()
+    const playerData = await Player.findAll()
+
+    const teams = teamData.map((team) => team.get({ plain: true }));
+    const players = playerData.map((team) => team.get({ plain: true }))
+
+    res.render('teams', { teams, players })
   } catch (err) {
     res.status(500).json(err);
   }

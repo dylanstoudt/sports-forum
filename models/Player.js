@@ -17,6 +17,10 @@ Player.init(
         type: DataTypes.STRING,
         allowNull: false
     },
+    img: {
+        type: DataTypes.STRING,
+        allownull: false
+    },
     ppg: {
       type: DataTypes.INTEGER,
       allowNull: false,
