@@ -6,9 +6,9 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#project-desc').value.trim();
 
   if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/dashboard`, {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({ teamName, player1, player2, player3, user_id }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -17,7 +17,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create team');
     }
   }
 };
