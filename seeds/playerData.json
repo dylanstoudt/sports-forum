@@ -18,6 +18,7 @@
     "blocks": 1,
     "ranking": 2,
     "team_id": 2
+
   },
   {
     "name": "Luka Doncic",
@@ -28,6 +29,7 @@
     "blocks": 1,
     "ranking": 3,
     "team_id": 1
+
   },
   {
     "name": "Jayson Tatum",
@@ -38,6 +40,7 @@
     "blocks": 1,
     "ranking": 4,
     "team_id": 2
+
   },
   {
     "name": "Joel Embiid",
@@ -48,6 +51,7 @@
     "blocks": 2,
     "ranking": 5,
     "team_id": 1
+
   },
   {
     "name": "Kevin Durant",
@@ -58,6 +62,7 @@
     "blocks": 1,
     "ranking": 6,
     "team_id": 2
+
   },
   {
     "name": "Stephen Curry",
@@ -68,6 +73,7 @@
     "blocks": 0,
     "ranking": 7,
     "team_id": 1
+
   },
   {
     "name": "Lebron James",
@@ -78,6 +84,7 @@
     "blocks": 1,
     "ranking": 8,
     "team_id": 2
+
   },
   {
     "name": "Ja Morant",
@@ -88,6 +95,7 @@
     "blocks": 0,
     "ranking": 9,
     "team_id": 1
+
   },
   {
     "name": "Damian Lillard",
@@ -98,6 +106,8 @@
     "blocks": 0,
     "ranking": 10,
     "team_id": 2
+    
+
   }
  
 ]
