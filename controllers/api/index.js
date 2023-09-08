@@ -5,6 +5,6 @@ const playersRoutes = require('./playersRoutes')
 
 router.use('/users', userRoutes);
 router.use('/teams', teamsRoutes);
-router.use('players', playersRoutes)
+router.use('/players', playersRoutes)
 
 module.exports = router;
