@@ -11,7 +11,7 @@ players.addEventListener("click", async function(event){
         const response = await fetch("/api/players/" + clickedId, {
 
 
-            method: "POST",
+            method: "PUT",
             body: JSON.stringify({ }),
             headers: {
               'Content-Type': 'application/json',

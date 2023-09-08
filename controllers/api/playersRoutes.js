@@ -1,15 +1,29 @@
 const router = require('express').Router();
-const { Player, User } = require('../../models');
+const { Player, User, Team } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
-  router.post('/', async (req, res) => {
+  router.put('/:id', async (req, res) => {
+
     try {
-      const newTeam = await Player.create({
-        ...req.body,
-        user_id: req.session.user_id,
-      });
-      res.status(200).json(newTeam);
+      const updatedPlayer = await Player.findByPk(
+        req.params.id
+      
+      );
+      const userData = await User.findByPk(req.session.user_id,  {include: [
+        {
+          model: Team,
+          // add attributes
+         
+        }
+      ]})
+      console.log(userData.team)
+      await updatedPlayer.update({team_id: userData.team.id})
+      await updatedPlayer.save()
+      console.log("FOUND PLAYER", updatedPlayer)
+      console.log("USERDATA", userData)
+      res.status(200).json(updatedPlayer);
     } catch (err) {
+      console.log(err)
       res.status(400).json(err);
     }
   });

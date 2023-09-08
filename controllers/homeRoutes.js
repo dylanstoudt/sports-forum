@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const teams = teamData.map((team) => team.get({ plain: true }));
     const players = playerData.map((team) => team.get({ plain: true }))
 
-    res.render('homepage', { teams, players })
+    res.render('homepage', { teams, players,   logged_in: true })
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -41,13 +41,15 @@ router.get('/dashboard', withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
+    // find all players where the team id is the current users (req.session.user_id) team id
+    // and give this to handlebars
     const playerData = await Player.findAll()
 
     const teams = teamData.map((team) => team.get({ plain: true }));
     console.log(teams);
+    // only want players back that dont have a team_id or team_id is null
     const players = playerData.map((team) => team.get({ plain: true }))
-
-    res.render('dashboard', { teams, players })
+    res.render('dashboard', { teams, players,   logged_in: true })
     // res.render('dashboard', { teams, players })
   } catch (err) {
     res.status(500).json(err);
@@ -62,7 +64,7 @@ router.get('/teams', withAuth, async (req, res) => {
     const teams = teamData.map((team) => team.get({ plain: true }));
     const players = playerData.map((team) => team.get({ plain: true }))
 
-    res.render('teams', { teams, players })
+    res.render('teams', { teams, players,   logged_in: true })
   } catch (err) {
     res.status(500).json(err);
   }
