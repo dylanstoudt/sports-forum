@@ -5,7 +5,7 @@ router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
     console.log(userData)
-    const teamData = await Team.create()
+    const teamData = await Team.create({teamName: `${userData.name}'s team`, user_id: userData.id})
     console.log(teamData);
 
     req.session.save(() => {

@@ -22,7 +22,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
           // add attributes
           attributes: ['img', 'name', 'ppg', 'assists', 'rebounds', 'steals', 'blocks', 'ranking']
         },
-    
+        
       ],
       where: {
         user_id: req.session.user_id,

@@ -1,8 +1,9 @@
-let players = document.querySelector("#players")
+let players = document.querySelector(".playerContainer")
 
-cars.addEventListener("click", async function(event){
-
-    if(event.target.matches("button")){
+players.addEventListener("click", async function(event){
+    // event.stopPropagation()
+    console.log("clicked", event.target)
+    if(event.target.matches(".addBtn")){
         let clickedId = event.target.getAttribute("data-id")
 
         console.log(clickedId);
@@ -11,7 +12,10 @@ cars.addEventListener("click", async function(event){
 
 
             method: "POST",
-               
+            body: JSON.stringify({ }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
         }); 
         
         await response.json();
