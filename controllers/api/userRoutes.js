@@ -1,9 +1,12 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Team } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
+    console.log(userData)
+    const teamData = await Team.create()
+    console.log(teamData);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
