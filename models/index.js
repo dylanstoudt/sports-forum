@@ -1,6 +1,7 @@
 const User = require('./User');
 const Team = require('./Team');
-const Player = require('./Player')
+const Player = require('./Player');
+const PlayersTeam = require('./PlayersTeam');
 
 User.hasOne(Team, {
   foreignKey: 'user_id',
@@ -11,12 +12,14 @@ Team.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Team.hasMany(Player, {
-  foreignKey: 'user_id'
+Team.belongsToMany(Player, {
+  foreignKey: 'team_id',
+  through: PlayersTeam
 })
 
-Player.belongsTo(Team, {
-  foreignKey: 'team_id'
+Player.belongsToMany(Team, {
+  foreignKey: 'player_id',
+  through: PlayersTeam
 })
 
-module.exports = { User, Team, Player };
+module.exports = { User, Team, Player, PlayersTeam };

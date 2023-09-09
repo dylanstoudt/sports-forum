@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Team, Player, User } = require('../models');
+const { Team, Player, User, PlayersTeam } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -32,6 +32,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       include: [
         {
           model: Player,
+          through: PlayersTeam,
           // add attributes
           attributes: ['img', 'name', 'ppg', 'assists', 'rebounds', 'steals', 'blocks', 'ranking']
         },
@@ -58,7 +59,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 router.get('/teams', withAuth, async (req, res) => {
   try {
-    const teamData = await Team.findall()
+    const teamData = await Team.findAll()
     const playerData = await Player.findAll()
 
     const teams = teamData.map((team) => team.get({ plain: true }));
