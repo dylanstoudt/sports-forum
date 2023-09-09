@@ -12,6 +12,7 @@
         <div class="group relative">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
             <a href="#">
+              
               <span class="absolute inset-0"></span>
               My Favorite Player
             </a>
@@ -19,9 +20,9 @@
           </h3>
           <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
         </div>
-        <div class="relative mt-8 flex items-center gap-x-4">
+        <div class="relative mt-8 flex gap-x-4">
           <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png" alt=""
-            class="object-scale-down h-48 w-96 ...">
+            class="object-left h-48 w-96 ...">
           <div class="text-sm leading-6">
             <p class="font-semibold text-gray-900">
               <a href="#">
@@ -33,7 +34,7 @@
           </div>
         </div>
       </article>
-      <article class="flex max-w-xl flex-col items-start justify-between">
+      <article class="flex max-w-xl flex-col items-center justify-between">
         <div class="flex items-center gap-x-4 text-xs">
         </div>
         <div class="group relative">
@@ -41,7 +42,14 @@
             {{teams.[0].teamName}}
           </h3>
 
-          <div id='myTeam' class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">hey append to myTeam id</div>
+          <div id='myTeam' class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+            {{#each teams.[0].players as |player|}} 
+          <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
+          <p>{{player.name}}</p>
+          <p>{{player.rebounds}} rebounds</p>
+          <p>{{player.assists}} assists</p>
+            {{/each}}
+          </div>
         </div>
       </article>
 
@@ -49,7 +57,10 @@
         <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
           <a href="#" class="grid grid-rows-3 grid-flow-col gap-4 py-3">
             <span class="absolute inset-0"></span>
-            <button
+            <h2 class="text-center">Who Will Be Victorious?</h2><br>
+            <img src="https://m.media-amazon.com/images/I/51yQix+-S1L.jpg" alt=""
+            class="object-left h-96 w-96 ...">
+            {{!-- <button
               class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
               data-id="{{player.id}}">Nikola Jokic</button>
             <button
@@ -78,7 +89,7 @@
               data-id="{{player.id}}">Ja Morant</button>
             <button
               class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Damian Lillard</button>
+              data-id="{{player.id}}">Damian Lillard</button> --}}
           </a>
         </h3>
         <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
@@ -113,7 +124,7 @@
             <p class="mt-1 text-xs leading-5 text-gray-500">{{ranking}}
           </div>
         </li> --}}
-        <div class="playerContainer">
+        <div class="playerContainer col-md-6">
           {{#each players as |player|}}
           <div class="players" data-id={{player.id}}>
             <li class="flex justify-between gap-x-6 py-5">
@@ -121,7 +132,9 @@
                 <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
                 <div class="min-w-0 flex-auto">
                   <p class="text-sm font-semibold leading-6 text-gray-900">{{player.name}}</p>
-                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">Player 3</p>
+                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.ppg}} ppg</p>
+                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.rebounds}} rebounds</p>
+                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.assists}} assists</p>
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
@@ -131,6 +144,7 @@
             </li>
           </div>
           <button class="addBtn" data-id={{player.id}}>Add</button>
+              <p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600"></p>
           {{/each}}
         </div>
 
