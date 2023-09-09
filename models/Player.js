@@ -45,13 +45,6 @@ Player.init(
     ranking: {
         type: DataTypes.INTEGER
     },
-    team_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'team',
-            key: 'id'
-        }
-    }
   },
   {
     sequelize,
