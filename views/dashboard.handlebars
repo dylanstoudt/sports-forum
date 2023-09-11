@@ -12,9 +12,9 @@
         <div class="group relative">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
             <a href="#">
-              
+
               <span class="absolute inset-0"></span>
-              My Favorite Player
+              Spotlight! # 1 Ranked Player
             </a>
             <h2 id="profile-heads">Nikola Jokic{{name}}</h2>
           </h3>
@@ -34,122 +34,121 @@
           </div>
         </div>
       </article>
-      <article class="flex max-w-xl flex-col items-center justify-between">
-        <div class="flex items-center gap-x-4 text-xs">
+
+      <div>
+        <div class="px-4 sm:px-0">
+          <h3 class="text-base font-semibold leading-7 text-gray-900">How to play?</h3>
+          <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Your Objective</p>
         </div>
-        <div class="group relative">
+        <div class="mt-6 border-t border-gray-100">
+          <dl class="divide-y divide-gray-100">
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">Become the ultimate General Manager</dt>
+              <h3 class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Win a Championship!</h3>
+            </div>
+           
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">Salary expectation</dt>
+              <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">$10,000,000</dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">About</dt>
+              <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Welcome to the Fantasy NBA 3 on 3 Basketball Tournament! You have been awarded $10,000,000 as the newly appointed General Manager to draft your "DreamTeam" and see how they fare up against other Fantasy match-ups!</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <article class="flex max-w-xl flex-row justify-between">
+        {{!-- <div class="flex items-center gap-x-4 text-xs center">
+        </div> --}}
+        <div class="group relative items-center">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-            {{teams.[0].teamName}}
+            {{!-- <a href="#">
+
+              <span class="absolute inset-0"></span> --}}
+              {{teams.[0].teamName}}
+              {{!-- </a> --}}
+            {{!-- <h2 id="profile-heads">My 3v3 Team</h2> --}}
           </h3>
 
-          <div id='myTeam' class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-            {{#each teams.[0].players as |player|}} 
-          <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
-          <p>{{player.name}}</p>
-          <p>{{player.rebounds}} rebounds</p>
-          <p>{{player.assists}} assists</p>
+          <div id='myTeam' class="mt-5 text-sm leading-6 text-gray-600 center">
+            {{#each teams.[0].players as |player|}}
+            <img class="items-center object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
+            <p>{{player.name}}</p>
+            <p>{{player.ppg}} ppg</p>
+            <p>{{player.rebounds}} rebounds</p>
+            <p>{{player.assists}} assists</p>
             {{/each}}
+
           </div>
         </div>
+
       </article>
 
+      {{!-- <div class="playerContainer  grid grid-cols-4">
+        <b>
+          <h1 class="text-lg">Add 3 players to your team!</h1>
+        </b> --}}
+        {{#each players as |player|}}
+        <div class="players grid grid-cols-4 gap-4" data-id={{player.id}}>
+          {{!-- <li class="flex justify-between gap-x-6 py-5"> --}}
+         
+              <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
+        
+                <p class="text-sm font-semibold leading-6 text-gray-900">{{player.name}}</p>
+                <p class="text-sm leading-6 text-gray-900">Ranking</p>
+              <p class="mt-1 text-xs leading-5 text-gray-500">{{player.ranking}}</p>
+              <p></p>
+                <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.ppg}} ppg</p>
+                <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.rebounds}} rebounds</p>
+                <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.assists}} assists</p>
+                <p></p>
+            <div class="">
+              <p class="text-sm leading-6 text-gray-900">Cost</p>
+              <p class="mt-1 text-xs leading-5 text-gray-500">${{player.cost}}</p>
+            </div>
+       
+         
+          {{!-- </li> --}}
+        </div>
+        <button class="addBtn" data-id={{player.id}}>Add</button>
+        <p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600"></p>
+        {{/each}}
+      {{!-- </div> --}}
+
+      {{!-- <div class="group relative">
+        <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+          <a href="#" class="grid grid-rows-3 grid-flow-col gap-4 py-3">
+            <span class="absolute inset-0"></span>
+            <h2 class="text-center">Who Will Be Victorious?</h2><br>
+            <img src="https://m.media-amazon.com/images/I/51yQix+-S1L.jpg" alt="" class="object-left h-96 w-96 ...">
+          </a>
+        </h3>
+        <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
+      </div>
+      
       <div class="group relative">
         <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
           <a href="#" class="grid grid-rows-3 grid-flow-col gap-4 py-3">
             <span class="absolute inset-0"></span>
             <h2 class="text-center">Who Will Be Victorious?</h2><br>
-            <img src="https://m.media-amazon.com/images/I/51yQix+-S1L.jpg" alt=""
-            class="object-left h-96 w-96 ...">
-            {{!-- <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Nikola Jokic</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Giannis Antetokounmpo</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Luka Doncic</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Jayson Tatum</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Joel Embiid</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Kevin Durant</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Steph Curry</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Lebron James</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Ja Morant</button>
-            <button
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-              data-id="{{player.id}}">Damian Lillard</button> --}}
+            <img src="https://m.media-amazon.com/images/I/51yQix+-S1L.jpg" alt="" class="object-left h-96 w-96 ...">
           </a>
         </h3>
         <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
-      </div>
+      </div> --}}
 
-      {{!-- <ul role="list" class="divide-y divide-gray-100 py-5">
-        <li class="flex justify-between gap-x-6 py-5">
-          <div class="flex min-w-0 gap-x-4">
-            <img class="object-scale-down h-12 w-36 ..."
-              src="https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png" alt="">
-            <div class="min-w-0 flex-auto">
-              <p class="text-sm font-semibold leading-6 text-gray-900">Giannis Antetokounmpo{{name}}</p>
-              <p class="mt-1 truncate text-xs leading-5 text-gray-500">Player 1</p>
-            </div>
-          </div>
-          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-            <p class="text-sm leading-6 text-gray-900">Ranking</p>
-            <p class="mt-1 text-xs leading-5 text-gray-500">{{ranking}}
-          </div>
-        </li>
-        <li class="flex justify-between gap-x-6 py-5">
-          <div class="flex min-w-0 gap-x-4">
-            <img class="object-scale-down h-12 w-36 ..."
-              src="https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png" alt="">
-            <div class="min-w-0 flex-auto">
-              <p class="text-sm font-semibold leading-6 text-gray-900">Luka Doncic{{name}}</p>
-              <p class="mt-1 truncate text-xs leading-5 text-gray-500">Player 2</p>
-            </div>
-          </div>
-          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-            <p class="text-sm leading-6 text-gray-900">Ranking</p>
-            <p class="mt-1 text-xs leading-5 text-gray-500">{{ranking}}
-          </div>
-        </li> --}}
-        <div class="playerContainer col-md-6">
-          {{#each players as |player|}}
-          <div class="players" data-id={{player.id}}>
-            <li class="flex justify-between gap-x-6 py-5">
-              <div class="flex min-w-0 gap-x-4">
-                <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
-                <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">{{player.name}}</p>
-                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.ppg}} ppg</p>
-                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.rebounds}} rebounds</p>
-                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.assists}} assists</p>
-                </div>
-              </div>
-              <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">Ranking</p>
-                <p class="mt-1 text-xs leading-5 text-gray-500">{{player.ranking}}
-              </div>
-            </li>
-          </div>
-          <button class="addBtn" data-id={{player.id}}>Add</button>
-              <p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600"></p>
-          {{/each}}
-        </div>
-
-        {{!--
-      </ul> --}}
 
 
     </div>
