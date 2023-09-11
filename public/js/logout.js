@@ -1,18 +1,3 @@
-// const logout = async () => {
-//   const response = await fetch('/api/users/logout', {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//   });
-
-//   if (response.ok) {
-//     document.location.replace('/');
-//   } else {
-//     alert(response.statusText);
-//   }
-// };
-// console.log('Before event listener registration');
-// document.querySelector('#logout').addEventListener('click', logout);
-// public/js/logout.js
 const logout = async () => {
   try {
     const response = await fetch('/api/users/logout', {

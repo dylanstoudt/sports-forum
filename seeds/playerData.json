@@ -7,7 +7,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 1,
-    "team_id": 1, 
+    "cost": 5000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png"
   },
   {
@@ -18,7 +18,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 2,
-    "team_id": 2,
+    "cost": 4000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png"
   },
   {
@@ -29,7 +29,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 3,
-    "team_id": 1,
+    "cost": 4000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png"
   },
   {
@@ -40,7 +40,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 4,
-    "team_id": 2,
+    "cost": 3000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png"
   },
   {
@@ -51,7 +51,7 @@
     "steals": 1,
     "blocks": 2,
     "ranking": 5,
-    "team_id": 1,
+    "cost": 3000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png"
   },
   {
@@ -62,7 +62,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 6,
-    "team_id": 2,
+    "cost": 2000000,
     "img": "https://a.espncdn.com/i/headshots/nba/players/full/3202.png"
 
   },
@@ -74,7 +74,7 @@
     "steals": 1,
     "blocks": 0,
     "ranking": 7,
-    "team_id": 1,
+    "cost": 2000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"
   },
   {
@@ -85,7 +85,7 @@
     "steals": 1,
     "blocks": 1,
     "ranking": 8,
-    "team_id": 2,
+    "cost": 2000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
   },
   {
@@ -96,7 +96,7 @@
     "steals": 1,
     "blocks": 0,
     "ranking": 9,
-    "team_id": 1,
+    "cost": 1000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png"
   },
   {
@@ -107,7 +107,7 @@
     "steals": 1,
     "blocks": 0,
     "ranking": 10,
-    "team_id": 2,
+    "cost": 1000000,
     "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203081.png"  
   }
  

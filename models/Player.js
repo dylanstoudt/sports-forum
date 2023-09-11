@@ -45,12 +45,9 @@ Player.init(
     ranking: {
         type: DataTypes.INTEGER
     },
-    team_id: {
+    cost: {
         type: DataTypes.INTEGER,
-        references: {
-            model: 'team',
-            key: 'id'
-        }
+        allowNull: false,
     }
   },
   {
