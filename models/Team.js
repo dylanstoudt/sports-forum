@@ -16,18 +16,6 @@ Team.init(
       allowNull: true
 
     },
-    player1: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    player2: {
-      type: DataTypes.STRING,
-      allownull: true
-    },
-    Player3: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
