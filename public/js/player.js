@@ -1,4 +1,4 @@
-let players = document.querySelector(".playerContainer")
+let players = document.querySelector(".addBtn")
 
 players.addEventListener("click", async function(event){
     // event.stopPropagation()
@@ -6,7 +6,7 @@ players.addEventListener("click", async function(event){
     if(event.target.matches(".addBtn")){
         let clickedId = event.target.getAttribute("data-id")
 
-        console.log(clickedId);
+        console.log(clickedId,"jrtdjjrdtext");
 
         const response = await fetch("/api/players/" + clickedId, {
 
@@ -17,7 +17,7 @@ players.addEventListener("click", async function(event){
               'Content-Type': 'application/json',
             },
         }); 
-        
+        console.log(clickedId,"texttextedjjtj");
         await response.json();
         
 
