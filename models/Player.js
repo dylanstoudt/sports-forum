@@ -45,6 +45,10 @@ Player.init(
     ranking: {
         type: DataTypes.INTEGER
     },
+    cost: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    }
   },
   {
     sequelize,
