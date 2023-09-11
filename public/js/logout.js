@@ -4,7 +4,6 @@ const logout = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
-
     if (response.ok) {
       // Redirect to a desired page after logout (e.g., homepage)
       window.location.replace('/login');
