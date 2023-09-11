@@ -4,21 +4,22 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const teamData = await Team.findAll({
+    const teamsData = await Team.findAll({
       include: [
         {
           model: Player,
           // add attributes
-          attributes: ['img', 'name', 'ppg', 'assists', 'rebounds', 'steals', 'blocks', 'ranking']
+          // attributes: ['img', 'name', 'ppg', 'assists', 'rebounds', 'steals', 'blocks', 'ranking']
         }
       ],
     });
-    const playerData = await Player.findAll()
-
-    const teams = teamData.map((team) => team.get({ plain: true }));
-    const players = playerData.map((team) => team.get({ plain: true }))
-
-    res.render('homepage', { teams, players,   logged_in: true })
+    // const playerData = await Player.findAll()
+    // console.log(playerData);
+    const teams = teamsData.map((team) => team.get({ plain: true }));
+    // const players = playerData.map((player) => player.get({ plain: true }))
+    console.log(teams);
+    // console.log(teams.players[0]);
+    res.render('homepage', { teams, logged_in: true })
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
