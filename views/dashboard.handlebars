@@ -38,7 +38,8 @@
       <div>
         <div class="px-4 sm:px-0">
           <h3 class="text-base font-semibold leading-7 text-gray-900">How to play?</h3>
-          <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Your Objective is to build a Championship caliber team as the newly appointed General Manager. Utilize the resources awarded and create your dynasty!</p>
+          <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Your Objective is to build a Championship caliber
+            team as the newly appointed General Manager. Utilize the resources awarded and create your dynasty!</p>
         </div>
         <div class="mt-6 border-t border-gray-100">
           <dl class="divide-y divide-gray-100">
@@ -46,14 +47,16 @@
               <dt class="text-sm font-medium leading-6 text-gray-900">Become the Ultimate General Manager</dt>
               <h3 class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Win a Championship!</h3>
             </div>
-           
+
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">Salary expectation</dt>
               <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">$10,000,000</dd>
             </div>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">About</dt>
-              <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Welcome to the Fantasy NBA 3 on 3 Basketball Tournament! You have been awarded $10,000,000 as the newly appointed General Manager to draft your "DreamTeam" and see how they fare up against other Fantasy match-ups!</dd>
+              <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Welcome to the Fantasy NBA 3 on 3
+                Basketball Tournament! You have been awarded $10,000,000 as the newly appointed General Manager to draft
+                your "DreamTeam" and see how they fare up against other Fantasy match-ups!</dd>
             </div>
           </dl>
         </div>
@@ -96,38 +99,41 @@
 
       </article>
 
-       {{!-- <div class="playerContainer"> --}}
+      {{!-- <div class="playerContainer"> --}}
         {{!-- <b>
           <h1 class="text-lg">Add 3 players to your team!</h1>
-        </b>  --}}
-        
+        </b> --}}
+        <section>
         {{#each players as |player|}}
-        <div class="players grid grid-cols-4 gap-4 playerContainer" data-id={{player.id}}>
+        <div class="players block grid grid-cols-4 gap-4 playerContainer" data-id={{player.id}}>
           {{!-- <li class="flex justify-between gap-x-6 py-5"> --}}
-         
-              <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
-        
-                <p class="text-sm font-semibold leading-6 text-gray-900">{{player.name}}</p>
-                <p class="text-sm leading-6 text-gray-900">Ranking</p>
-              <p class="mt-1 text-xs leading-5 text-gray-500">{{player.ranking}}</p>
-              <p></p>
-                <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.ppg}} ppg</p>
-                <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.rebounds}} rebounds</p>
-                <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.assists}} assists</p>
-                <p></p>
+
+            <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
+
+            <p class="text-sm font-semibold leading-6 text-gray-900">{{player.name}}</p>
+            <p class="text-sm leading-6 text-gray-900">Ranking</p>
+            <p class="mt-1 text-xs leading-5 text-gray-500">{{player.ranking}}</p>
+            <p></p>
+            <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.ppg}} ppg</p>
+            <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.rebounds}} rebounds</p>
+            <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.assists}} assists</p>
+            <p></p>
             <div class="">
               <p class="text-sm leading-6 text-gray-900">Cost</p>
               <p class="mt-1 text-xs leading-5 text-gray-500">${{player.cost}}</p>
             </div>
-       
-         
-          {{!-- </li> --}}
+
+
+            {{!--
+          </li> --}}
+        <button class="addBtn bg-success" data-id={{player.id}}>Add</button>
         </div>
-        <button class="addBtn" data-id={{player.id}}>Add</button>
-      
+
         <p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600"></p>
         {{/each}}
-      {{!-- </div> --}}
+        </section>
+        {{!--
+      </div> --}}
 
       {{!-- <div class="group relative">
         <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -139,7 +145,7 @@
         </h3>
         <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
       </div>
-      
+
       <div class="group relative">
         <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
           <a href="#" class="grid grid-rows-3 grid-flow-col gap-4 py-3">

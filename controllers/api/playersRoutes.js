@@ -20,8 +20,9 @@ const { Player, User, Team, PlayersTeam } = require('../../models');
       console.log(userData.team.id)
       const addPlayer = await PlayersTeam.create({
         team_id:userData.team.id,
-        player_id:req.params.id
+        player_id:parseInt(req.params.id)
       })
+      console.log('============');
       console.log(addPlayer);
       // await updatedPlayer.update({team_id: userData.team.id})
       // await updatedPlayer.save()

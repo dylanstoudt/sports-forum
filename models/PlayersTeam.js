@@ -19,7 +19,6 @@ PlayersTeam.init(
             key: 'id'
         }
     },
-
     player_id: {
         type: DataTypes.INTEGER,
         references: {
@@ -27,7 +26,7 @@ PlayersTeam.init(
             key: 'id'
         }
     },
-
+    
   },
   {
     sequelize,
