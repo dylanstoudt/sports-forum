@@ -96,34 +96,36 @@
 
       </article>
 
-      <div class="playerContainer row">
+      {{!-- <div class="playerContainer  grid grid-cols-4">
         <b>
           <h1 class="text-lg">Add 3 players to your team!</h1>
-        </b>
+        </b> --}}
         {{#each players as |player|}}
         <div class="players grid grid-cols-4 gap-4" data-id={{player.id}}>
-          <li class="flex justify-between gap-x-6 py-5">
-            <div class="flex min-w-0 gap-x-4">
+          {{!-- <li class="flex justify-between gap-x-6 py-5"> --}}
+         
               <img class="object-scale-down h-12 w-36 ..." src={{player.img}} alt="">
-              <div class="min-w-0 flex-auto">
+        
                 <p class="text-sm font-semibold leading-6 text-gray-900">{{player.name}}</p>
+                <p class="text-sm leading-6 text-gray-900">Ranking</p>
+              <p class="mt-1 text-xs leading-5 text-gray-500">{{player.ranking}}</p>
+              <p></p>
                 <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.ppg}} ppg</p>
                 <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.rebounds}} rebounds</p>
                 <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{player.assists}} assists</p>
-                <p class="text-sm leading-6 text-gray-900">Ranking</p>
-              <p class="mt-1 text-xs leading-5 text-gray-500">{{player.ranking}}</p>
-              </div>
-            </div>
-            <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                <p></p>
+            <div class="">
               <p class="text-sm leading-6 text-gray-900">Cost</p>
               <p class="mt-1 text-xs leading-5 text-gray-500">${{player.cost}}</p>
             </div>
-          </li>
+       
+         
+          {{!-- </li> --}}
         </div>
         <button class="addBtn" data-id={{player.id}}>Add</button>
         <p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600"></p>
         {{/each}}
-      </div>
+      {{!-- </div> --}}
 
       {{!-- <div class="group relative">
         <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
