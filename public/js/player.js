@@ -1,12 +1,12 @@
-let players = document.querySelector(".playerContainer")
+let playerContainer = document.querySelector("section")
 
-players.addEventListener("click", async function (event) {
+playerContainer.addEventListener("click", async function (event) {
     // event.stopPropagation()
     console.log("clicked", event.target)
     if (event.target.matches(".addBtn")) {
         let clickedId = event.target.getAttribute("data-id")
 
-        console.log(clickedId);
+        console.log(clickedId,"jrtdjjrdtext");
 
         const response = await fetch("/api/players/" + clickedId, {
 
